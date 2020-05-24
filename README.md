@@ -1,4 +1,4 @@
-# Kaggle Competition (2020): Tweet Sentiment Extraction
+# Kaggle Competition: Tweet Sentiment Extraction (2020 June)
 
 [Official website for Kaggle TSE competition](https://www.kaggle.com/c/tweet-sentiment-extraction)
 
@@ -6,6 +6,7 @@
 
 1. [Dataset](#dataset)
 2. [Competition task](#task)
+3. [Evaluation](#evaluation)
 
 ## Dataset
 
@@ -47,8 +48,10 @@ train.csv, test.csv and sample_submission.csv are provided
 | 3  | 01082688c6  |  NaN |
 | 4  | 33987a8ee5 |  NaN |
 
-### Task
-Extract which words lead to the tweet sentiment label ('negative', 'neutral' or 'positive')
+## Task
+Extract which words lead to the tweet sentiment label ('negative', 'neutral' or 'positive'). Return those in 'selected_text' column with submission file.
+
+## Evaluation
 
 
 
