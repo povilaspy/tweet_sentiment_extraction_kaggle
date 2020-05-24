@@ -8,6 +8,7 @@
 2. [Competition task](#task)
 3. [Evaluation](#evaluation)
 4. [Baseline](#baseline)
+5. [Ideation](#ideation)
 
 ## Dataset
 
@@ -79,3 +80,22 @@ Example described in Sanket Gupta's [blog post](https://towardsdatascience.com/o
 
 Source: [Overview of Text Similarity Metrics in Python](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
 
+## Baseline
+
+For the baseline we submit same 'text' as provided in test set without modifications:
+
+```python
+PATH = '/kaggle/input/tweet-sentiment-extraction/'
+train = pd.read_csv(PATH + 'train.csv')
+test = pd.read_csv(PATH + 'test.csv')
+submission = pd.read_csv(PATH + 'sample_submission.csv')
+submission['selected_text'] = test['text']
+submission.to_csv("submission.csv")
+```
+
+This gives us Jaccard score of 0.594 which we will need to beat.
+
+## Ideation
+
+* Forecast positive/neutral/negative to match ground truth
+* Extract tokens importance and return the string between first and last most important token
