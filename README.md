@@ -7,6 +7,7 @@
 1. [Dataset](#dataset)
 2. [Competition task](#task)
 3. [Evaluation](#evaluation)
+4. [Baseline](#baseline)
 
 ## Dataset
 
@@ -18,11 +19,11 @@ train.csv, test.csv and sample_submission.csv are provided
 
 |   | textID  |  text |  selected_text | sentiment  |
 |---|---|---|---|---|
-| 0  | cb774db0d1  |  I`d have responded, if I were going | I`d have responded, if I were going  | neutral  |
+| 0  | cb774db0d1  |  I\`d have responded, if I were going | I\`d have responded, if I were going  | neutral  |
 | 1  | 549e992a42  | Sooo SAD I will miss you here in San Diego!!!  | Sooo SAD  | negative  |
 | 2  | 088c60f138  | my boss is bullying me...  | bullying me	  | negative  |
 | 3  | 9642c003ef  | what interview! leave me alone  | leave me alone		  | negative  |
-| 4  | 358bd9e861  | Sons of ****, why couldn`t they put them on t...  | Sons of ****, | negative  |
+| 4  | 358bd9e861  | Sons of ****, why couldn\`t they put them on t...  | Sons of ****, | negative  |
 
 ### test.csv
 
@@ -53,6 +54,28 @@ Extract which words lead to the tweet sentiment label ('negative', 'neutral' or 
 
 ## Evaluation
 
+Evaluation is based on Jaccard score, which shows similarity between two strings ('selected_text' in submission file and 'selected_text' in private test set file).
 
+A Python implementation of Jaccard score is:
 
+```python
+def jaccard(str1, str2): 
+    a = set(str1.lower().split()) 
+    b = set(str2.lower().split())
+    c = a.intersection(b)
+    return float(len(c)) / (len(a) + len(b) - len(c))
+```
+
+Example described in Sanket Gupta's [blog post](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50):
+
+* str1: AI is our friend and it has been friendly
+* str2: AI and humans have always been friendly
+
+<img src="https://miro.medium.com/max/926/1*u2ZZPh5er5YbmOg7k-s0-A.png">
+
+* Jaccard similarity is calculated as the size of intersection divided by size of union of two sets.
+* Performance of lemmatization to reduce words to the same root word is needed. That is “friend” and “friendly” will both become “friend”, “has” and “have” will both become “has”.
+* Jaccard similarity for example above is 5/(5+3+2) = 0.5.
+
+Source: [Overview of Text Similarity Metrics in Python](https://towardsdatascience.com/overview-of-text-similarity-metrics-3397c4601f50)
 
