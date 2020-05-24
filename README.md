@@ -98,4 +98,4 @@ This gives us Jaccard score of 0.594 which we will need to beat.
 ## Ideation
 
 * Forecast positive/neutral/negative to match ground truth
-* Extract tokens importance and return the string between first and last most important token
+* Extract tokens importance and return the string between first and last most important token or clean the tokens with lowest importance
