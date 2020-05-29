@@ -9,6 +9,7 @@
 3. [Evaluation](#evaluation)
 4. [Baseline](#baseline)
 5. [Ideation](#ideation)
+6. [Notebook: Twitter Sentiment Extraction]()
 
 ## Dataset
 
@@ -98,4 +99,10 @@ This gives us Jaccard score of 0.594 which we will need to beat.
 ## Ideation
 
 * Forecast positive/neutral/negative to match ground truth
-* Extract tokens importance and return the string between first and last most important token or clean the tokens with lowest importance
+* Extract tokens importance and return the string between first and last most important token
+    * alternatively clean the tokens with lowest importance
+    * for neutral comments, return full text
+
+## Notebook: Twitter Sentiment Extraction
+
+Notebook is available [here]().
