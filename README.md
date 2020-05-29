@@ -9,7 +9,7 @@
 3. [Evaluation](#evaluation)
 4. [Baseline](#baseline)
 5. [Ideation](#ideation)
-6. [Notebook: Twitter Sentiment Extraction]()
+6. [Notebook: Twitter Sentiment Extraction](https://github.com/povilaspy/tweet_sentiment_extraction_kaggle/blob/master/kaggle_twitter_sentiment_extraction.ipynb)
 
 ## Dataset
 
@@ -105,4 +105,4 @@ This gives us Jaccard score of 0.594 which we will need to beat.
 
 ## Notebook: Twitter Sentiment Extraction
 
-Notebook is available [here]().
+Notebook is available [here](https://github.com/povilaspy/tweet_sentiment_extraction_kaggle/blob/master/kaggle_twitter_sentiment_extraction.ipynb).
