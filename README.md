@@ -91,7 +91,7 @@ train = pd.read_csv(PATH + 'train.csv')
 test = pd.read_csv(PATH + 'test.csv')
 submission = pd.read_csv(PATH + 'sample_submission.csv')
 submission['selected_text'] = test['text']
-submission.to_csv("submission.csv")
+submission.to_csv("submission.csv", index=False)
 ```
 
 This gives us Jaccard score of 0.594 which we will need to beat.
